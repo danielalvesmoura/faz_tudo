@@ -1,5 +1,11 @@
+import 'package:isar/isar.dart';
+
+part 'usuario.g.dart';
+
+@collection
 class Usuario {
-  final String id;
+  Id id = Isar.autoIncrement;
+
   final String nome;
   final String email;
   final String telefone;
