@@ -15,7 +15,7 @@ class AppTeste extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        fontFamily: 'Manrope'
+        fontFamily: 'Inter'
       ),
       routes: {
         Rotas.inicial: (context) => TelaInicial(),
