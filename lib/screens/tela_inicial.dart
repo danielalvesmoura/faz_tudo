@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
+import 'package:flutter_application_1/screens/rotas.dart';
 
 class TelaInicial extends StatelessWidget {
   @override
@@ -110,7 +111,7 @@ class TelaInicial extends StatelessWidget {
                     
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/login');
+                    Navigator.of(context).pushNamed(Rotas.login);
                   },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.black,
