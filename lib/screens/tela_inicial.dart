@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
+import 'package:flutter_application_1/widgets/botao.dart';
 import 'package:flutter_application_1/screens/rotas.dart';
 
 class TelaInicial extends StatelessWidget {

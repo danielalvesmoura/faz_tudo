@@ -11,7 +11,7 @@ class TelaLogin extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.of(context).pushNamed(Rotas.inicial);
+            Navigator.pop(context);
           }, 
           icon: Icon(
             Icons.arrow_back, 
