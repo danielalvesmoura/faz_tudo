@@ -1,99 +1,262 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
+import 'package:flutter_application_1/screens/rotas.dart';
 
 class TelaLogin extends StatelessWidget {
-  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.blue,
-      child: Scaffold(
+    return Scaffold(
 
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          leading: 
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-              child: Row(
-                children: [
-
-                  IconButton(
-                    onPressed: (){}, 
-                    icon: Icon(
-                      Icons.arrow_back, 
-                      color: Colors.white
-                    )
-                  ),
-
-                  SizedBox(width: 10,),
-            
-                  Text(
-                    'Entrar',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 20
-                    ),
-                  ),
-
-                ],
-              ),
-            ),
-          leadingWidth: 700,
-          actions: [
-            Logo(tamanho: 30, mainAxisAlignment: MainAxisAlignment.center,)
-          ],
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed(Rotas.inicial);
+          }, 
+          icon: Icon(
+            Icons.arrow_back, 
+            color: Color.fromARGB(255, 0, 77, 139),
+            size: 40,
+          )
         ),
+      ),
 
-        body: Padding(
-          padding: const EdgeInsets.all(20.0),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 30
+          ),
           child: Column(
             children: [
 
-              Text(
-                'Entre na sua conta e começe seus negócios!',
-                style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 30,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
+                child: Logo(
+                  tamanho: 50, 
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  corIcone: Color.fromARGB(255, 0, 77, 139),
+                  corTexto: Color.fromARGB(255, 0, 77, 139),
                 ),
-                textAlign: TextAlign.center,
+              ),
+
+              SizedBox(height: 50),
+
+              Text(
+                'Entrar',
+                style: TextStyle(
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                  fontSize: 60,
+                  fontWeight: FontWeight(900)
+                ),
               ),
 
               SizedBox(height: 20),
 
               Text(
-                'Acesse e aproveite toda a experiência do Faz!',
+                'Bem-vindo de volta! Por favor, insira seus dados.',
                 style: TextStyle(
-                  fontWeight: FontWeight.w600, 
-                  fontSize: 15,
-                  color: Colors.grey
+                  color: const Color.fromARGB(255, 82, 82, 82),
+                  decoration: TextDecoration.none,
+                  fontSize: 22,
+                  fontWeight: FontWeight(100)
                 ),
                 textAlign: TextAlign.center,
               ),
 
-              SizedBox(height: 40,),
+              SizedBox(height: 60),
 
-              Form(
-                key: _formKey,
-                child: Column(
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 30
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        labelText: 'Nome de usuário ou E-mail',
-                        border: OutlineInputBorder()
-                      ),
-                    )
+                    ElevatedButton(
+                      onPressed: () {
+                      }, 
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Image.asset('icon/icone-google.png',scale: 6,),
+                            
+                                SizedBox(width: 10),
+                                
+                                Text(
+                                  'Google',
+                                  style: TextStyle(
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    decoration: TextDecoration.none,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight(100)
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                            
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                    ),
+                
+                    ElevatedButton(
+                      onPressed: () {
+                      }, 
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Image.asset('icon/icone-apple.png',scale: 5,),
+                            
+                                SizedBox(width: 10),
+                                
+                                Text(
+                                  'Apple',
+                                  style: TextStyle(
+                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    decoration: TextDecoration.none,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight(100)
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                            
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                    ),
                   ],
                 ),
               ),
 
-            ],
+              SizedBox(height: 40),
+
+              Text(
+                'ou use seu e-mail',
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 129, 129, 129),
+                  decoration: TextDecoration.none,
+                  fontSize: 22,
+                  fontWeight: FontWeight(500)
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+              SizedBox(height: 40),
+
+              FormLogin()
+
+
+            ]         
           ),
         )
       )
+    );
+  }
+}
+
+class FormLogin extends StatefulWidget {
+  @override
+  State<FormLogin> createState() => _FormLoginState();
+}
+
+class _FormLoginState extends State<FormLogin> {
+  final _formKey = GlobalKey<FormState>();
+
+  final _emailController = TextEditingController();
+  final _senhaController = TextEditingController();
+
+  void _submit() {
+    // if (_formKey.currentState!.validate() == true) {
+    //   Navigator.of(context).pushNamed(Rotas.home);
+    // }
+
+    Navigator.of(context).pushNamed(Rotas.home);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          TextFormField(
+            controller: _emailController,
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              labelText: 'Email',
+              hintText: 'email@exemplo.com'
+            ),
+
+            validator: (value) {
+              if(value == null) {
+                return 'digite seu email';
+              }
+              return null;
+            },
+          ),
+
+          SizedBox(height: 30),
+
+          TextFormField(
+            controller: _senhaController,
+            decoration: InputDecoration(
+              labelText: 'Senha',
+            ),
+            obscureText: true,
+          ),
+
+          SizedBox(height: 50),
+
+          ElevatedButton(
+            onPressed: _submit,
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.black,
+              backgroundColor: const Color.fromARGB(255, 0, 77, 139),
+              minimumSize: Size(425, 75),
+            ),
+            child: Stack(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+      
+                  children: [
+                    Text(
+                      'Começar agora',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white
+                      ),
+                    ),
+      
+                    Icon(
+                      Icons.keyboard_arrow_right_rounded, 
+                      size: 40,
+                      color: Colors.white,
+                    )
+                  ],
+                ),
+              ],
+            ) 
+          ),
+        
+        ],
+      ),
     );
   }
 }

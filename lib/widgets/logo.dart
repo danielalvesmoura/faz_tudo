@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 class Logo extends StatelessWidget {
   final double tamanho;
   final MainAxisAlignment mainAxisAlignment;
+  final Color corIcone;
+  final Color corTexto;
 
   const Logo({
     super.key, 
     required this.tamanho,
-    required this.mainAxisAlignment
+    required this.mainAxisAlignment,
+    required this.corIcone,
+    required this.corTexto
   });
 
   @override
@@ -17,14 +21,15 @@ class Logo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: mainAxisAlignment,
         children: [
-          Icon(Icons.location_on, size: tamanho, color: const Color.fromARGB(255, 0, 140, 255)),
+          Icon(Icons.location_on, size: tamanho, color: corIcone),
           Text(
             'Faz',
             style: TextStyle(
-              color: Colors.white,
+              color: corTexto,
               decoration: TextDecoration.none,
               fontSize: tamanho * .75,
-              fontFamily: 'Manrope'
+              fontFamily: 'Manrope',
+              fontWeight: FontWeight(900)
             ),
           ),
         ],

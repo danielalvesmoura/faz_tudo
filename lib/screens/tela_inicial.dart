@@ -13,10 +13,10 @@ class TelaInicial extends StatelessWidget {
           height: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('fundo_tela_inicial.png'),
+              image: AssetImage('img/fundo_tela_inicial.png'),
               fit: BoxFit.cover
             )
-          ),
+          ), 
         ),
 
         Container(
@@ -43,7 +43,12 @@ class TelaInicial extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Logo(tamanho: 100,mainAxisAlignment: MainAxisAlignment.start,),
+                Logo(
+                  tamanho: 100,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  corIcone: Color.fromARGB(255, 0, 140, 255),
+                  corTexto: Colors.white,
+                ),
 
                 SizedBox(height: 40),
             
@@ -71,10 +76,8 @@ class TelaInicial extends StatelessWidget {
                 SizedBox(height: 60),
                     
                 ElevatedButton(
-                  onPressed: () {
-                    
-                  },
-                  
+                  onPressed: () {},
+                
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.black,
                     backgroundColor: const Color.fromARGB(255, 0, 77, 139),
