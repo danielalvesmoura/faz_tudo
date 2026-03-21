@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/botao.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
-import 'package:flutter_application_1/widgets/tela_home/card_subcategoria.dart';
+import 'package:flutter_application_1/widgets/tela_consertos/card_subcategoria.dart';
+import 'package:flutter_application_1/widgets/tela_consertos/card_oferta.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class TelaConsertos extends StatelessWidget {
@@ -130,6 +132,7 @@ class TelaConsertos extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                       color: Color.fromARGB(255, 36, 56, 155),
                       child: InkWell(
+                        borderRadius: BorderRadius.circular(30),
                         onTap: (){},
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
@@ -153,16 +156,91 @@ class TelaConsertos extends StatelessWidget {
                       ),
                     ),
 
+                    SizedBox(width: 10),
+
                     CardSubcategoria(
-                      icone: Icons.lightbulb_outline_rounded, 
+                      icone: Icons.flash_on, 
                       tamanhoIcone: 20, 
-                      cor: Colors.white,
-                      titulo: 'Eletricista', 
+                      corTexto: const Color.fromARGB(255, 75, 75, 75),
+                      corFundo: const Color.fromARGB(255, 209, 209, 209),
+                      titulo: 'Elétrico', 
                       onTap: (){}
-                    )
+                    ),
+
+                    SizedBox(width: 10),
+
+                    CardSubcategoria(
+                      icone: Icons.water_drop, 
+                      tamanhoIcone: 20, 
+                      corTexto: const Color.fromARGB(255, 75, 75, 75),
+                      corFundo: const Color.fromARGB(255, 209, 209, 209),
+                      titulo: 'Encanamento', 
+                      onTap: (){}
+                    ),
+
+                    SizedBox(width: 10),
+
+                    CardSubcategoria(
+                      icone: Icons.build, 
+                      tamanhoIcone: 20, 
+                      corTexto: const Color.fromARGB(255, 75, 75, 75),
+                      corFundo: const Color.fromARGB(255, 209, 209, 209),
+                      titulo: 'Mecânico', 
+                      onTap: (){}
+                    ),
+
+                    SizedBox(width: 10),
+
+                    CardSubcategoria(
+                      icone: Icons.handyman, 
+                      tamanhoIcone: 20, 
+                      corTexto: const Color.fromARGB(255, 75, 75, 75),
+                      corFundo: const Color.fromARGB(255, 209, 209, 209),
+                      titulo: 'Alvenaria', 
+                      onTap: (){}
+                    ),
+
+                    SizedBox(width: 10),
+
+                    CardSubcategoria(
+                      icone: Icons.computer, 
+                      tamanhoIcone: 20, 
+                      corTexto: const Color.fromARGB(255, 75, 75, 75),
+                      corFundo: const Color.fromARGB(255, 209, 209, 209),
+                      titulo: 'Eletrônico', 
+                      onTap: (){}
+                    ),
                   ],
                 ),
-              )
+              ),
+
+              SizedBox(height: 60),
+
+              SingleChildScrollView(
+                      child: Column(
+                        children: [
+
+                          CardOferta(
+                            urlImagem: 'img/limpeza.png', 
+                            titulo: 'Limpeza de Casa', 
+                            preco: 'R\$ 60,00 / hora', 
+                            descricao: 'Quer deixar sua casa brilhando sem stress? A gente cuida da faxina, do chão ao teto, rapidinho e caprichado. Preços justos...', 
+                            usuario: 'jose_roberto332'
+                          ),
+
+                          SizedBox(height: 60),
+
+                          CardOferta(
+                            urlImagem: 'img/mecanica.png', 
+                            titulo: 'Troca de Óleo e Pneus', 
+                            preco: 'R\$ 100,00 / hora', 
+                            descricao: 'Seu carro merece cuidado de verdade! 🚗💨Fazemos troca de óleo e pneus rapidinho e sem complicação. Peças de qualidade e serviço...', 
+                            usuario: 'Rafaela-Oficial1'
+                          )
+
+                        ],
+                      ),
+                    )
             ]
           )
         )

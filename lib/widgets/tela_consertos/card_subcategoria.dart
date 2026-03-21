@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CardSubcategoria extends StatelessWidget {
   final IconData icone;
   final double tamanhoIcone;
   final Color corTexto;
-  final Color corTexto;
+  final Color corFundo;
   final String titulo;
   final VoidCallback onTap;
 
   const CardSubcategoria({
     required this.icone,
     required this.tamanhoIcone,
-    required this.cor,
+    required this.corTexto,
+    required this.corFundo,
     required this.titulo,
     required this.onTap
   });
@@ -20,8 +22,9 @@ class CardSubcategoria extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadius.circular(30),
-      color: Color.fromARGB(255, 36, 56, 155),
+      color: corFundo,
       child: InkWell(
+        borderRadius: BorderRadius.circular(30),
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.symmetric(
@@ -30,12 +33,13 @@ class CardSubcategoria extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Icon(icone, size: tamanhoIcone, color: cor),
+              Icon(icone, size: tamanhoIcone, color: corTexto),
+              SizedBox(width: 10),
               Text(
                 titulo,
                 style: TextStyle(
                   fontSize: 20,
-                  color: cor,
+                  color: corTexto,
                   height: 1.6,
                   fontWeight: FontWeight(500)
                 ),
