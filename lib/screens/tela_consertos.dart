@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/botao.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
+import 'package:flutter_application_1/widgets/tela_home/card_subcategoria.dart';
 
 
 class TelaConsertos extends StatelessWidget {
@@ -125,7 +126,40 @@ class TelaConsertos extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    
+                    Material(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Color.fromARGB(255, 36, 56, 155),
+                      child: InkWell(
+                        onTap: (){},
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 5
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                'Todos',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: const Color.fromARGB(255, 255, 255, 255),
+                                  height: 1.6,
+                                  fontWeight: FontWeight(500)
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    CardSubcategoria(
+                      icone: Icons.lightbulb_outline_rounded, 
+                      tamanhoIcone: 20, 
+                      cor: Colors.white,
+                      titulo: 'Eletricista', 
+                      onTap: (){}
+                    )
                   ],
                 ),
               )
