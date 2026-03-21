@@ -12,9 +12,11 @@ class AppTeste extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: HomePage(), 
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: 'Manrope'
+      ),
       routes: {
         Rotas.inicial: (context) => TelaInicial(),
         Rotas.login: (context) => TelaLogin(),

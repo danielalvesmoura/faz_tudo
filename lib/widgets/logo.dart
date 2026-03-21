@@ -28,8 +28,7 @@ class Logo extends StatelessWidget {
               color: corTexto,
               decoration: TextDecoration.none,
               fontSize: tamanho * .75,
-              fontFamily: 'Manrope',
-              fontWeight: FontWeight(900)
+              fontWeight: FontWeight(800)
             ),
           ),
         ],

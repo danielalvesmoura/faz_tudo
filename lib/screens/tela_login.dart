@@ -50,7 +50,7 @@ class TelaLogin extends StatelessWidget {
                   color: Colors.black,
                   decoration: TextDecoration.none,
                   fontSize: 60,
-                  fontWeight: FontWeight(900)
+                  fontWeight: FontWeight(700)
                 ),
               ),
 
@@ -59,10 +59,10 @@ class TelaLogin extends StatelessWidget {
               Text(
                 'Bem-vindo de volta! Por favor, insira seus dados.',
                 style: TextStyle(
-                  color: const Color.fromARGB(255, 82, 82, 82),
+                  color: const Color.fromARGB(255, 75, 75, 75),
                   decoration: TextDecoration.none,
                   fontSize: 22,
-                  fontWeight: FontWeight(100)
+                  fontWeight: FontWeight(400)
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -96,7 +96,7 @@ class TelaLogin extends StatelessWidget {
                                     color: const Color.fromARGB(255, 0, 0, 0),
                                     decoration: TextDecoration.none,
                                     fontSize: 22,
-                                    fontWeight: FontWeight(100)
+                                    fontWeight: FontWeight(400)
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -128,7 +128,7 @@ class TelaLogin extends StatelessWidget {
                                     color: const Color.fromARGB(255, 0, 0, 0),
                                     decoration: TextDecoration.none,
                                     fontSize: 22,
-                                    fontWeight: FontWeight(100)
+                                    fontWeight: FontWeight(400)
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -148,10 +148,10 @@ class TelaLogin extends StatelessWidget {
               Text(
                 'ou use seu e-mail',
                 style: TextStyle(
-                  color: const Color.fromARGB(255, 129, 129, 129),
+                  color: const Color.fromARGB(255, 56, 56, 56),
                   decoration: TextDecoration.none,
                   fontSize: 22,
-                  fontWeight: FontWeight(500)
+                  fontWeight: FontWeight(400)
                 ),
                 textAlign: TextAlign.center,
               ),

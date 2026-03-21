@@ -57,7 +57,8 @@ class TelaInicial extends StatelessWidget {
                   'Tudo o que você precisa em um só lugar',
                   style: TextStyle(
                     color: Colors.white,
-                    decoration: TextDecoration.none
+                    decoration: TextDecoration.none,
+                    letterSpacing: 2,
                   ),
                 ),
 
