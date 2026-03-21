@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/botao.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
 import 'package:flutter_application_1/widgets/tela_home/card_categoria.dart';
+import 'package:flutter_application_1/widgets/tela_home/card_navbar.dart';
 import 'package:flutter_application_1/screens/rotas.dart';
 
 class TelaHome extends StatelessWidget {
@@ -16,8 +17,8 @@ class TelaHome extends StatelessWidget {
             Logo(
               tamanho: 40, 
               mainAxisAlignment: MainAxisAlignment.center,
-              corIcone: Color.fromARGB(255, 0, 77, 139),
-              corTexto: Color.fromARGB(255, 0, 77, 139),
+              corIcone: Color.fromARGB(255, 36, 56, 155),
+              corTexto: Color.fromARGB(255, 36, 56, 155),
             ),
           ],
         ),
@@ -34,12 +35,12 @@ class TelaHome extends StatelessWidget {
           SizedBox(width: 10,),
 
           IconButton(
-            icon: Icon(Icons.notifications, color: Color.fromARGB(255, 0, 77, 139), size: 35),
+            icon: Icon(Icons.notifications, color: Color.fromARGB(255, 36, 56, 155), size: 35),
             onPressed: () {},
           ),
           
           IconButton(
-            icon: Icon(Icons.menu, color: Color.fromARGB(255, 0, 77, 139), size: 40),
+            icon: Icon(Icons.menu, color: Color.fromARGB(255, 36, 56, 155), size: 40),
             onPressed: () {},
           ),
         ],
@@ -68,7 +69,7 @@ class TelaHome extends StatelessWidget {
                       TextSpan(
                         text: 'Serviço',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 0, 77, 139)
+                          color: Color.fromARGB(255, 36, 56, 155)
                         )
                       ),
                       TextSpan(text: ' ideal para você.')
@@ -139,7 +140,7 @@ class TelaHome extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           height: 1,
-                          color: Color.fromARGB(255, 0, 77, 139),
+                          color: Color.fromARGB(255, 36, 56, 155),
                           fontWeight: FontWeight(700),
                           fontFamily: 'Manrope'
                         ),
@@ -161,6 +162,8 @@ class TelaHome extends StatelessWidget {
                       CardCategoria(url: 'icon/ferramenta.png', tamanhoIcone: 4, titulo: 'Conserto'),
                       CardCategoria(url: 'icon/aspirador.png', tamanhoIcone: 7, titulo: 'Limpeza'),
                       CardCategoria(url: 'icon/cabeca.png', tamanhoIcone: 4, titulo: 'Beleza'),
+                      CardCategoria(url: 'icon/carro.png', tamanhoIcone: 7, titulo: 'Transporte'),
+                      CardCategoria(url: 'icon/hamburger.png', tamanhoIcone: 7, titulo: 'Alimentação'),
               
                     ],
                   ),
@@ -170,6 +173,47 @@ class TelaHome extends StatelessWidget {
           ),
         ),
       ),
+
+      bottomNavigationBar: Container(
+        height: 100,
+        width: double.infinity,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CardNavbar(
+              onTap: (){}, 
+              icon: Icons.house, 
+              size: 35, 
+              titulo: 'Home', 
+              cor: Color.fromARGB(255, 36, 56, 155),
+            ),
+
+            CardNavbar(
+              onTap: (){}, 
+              icon: Icons.settings, 
+              size: 35, 
+              titulo: 'Config.', 
+              cor: Color.fromARGB(255, 146, 150, 172),
+            ),
+
+            CardNavbar(
+              onTap: (){}, 
+              icon: Icons.email, 
+              size: 35, 
+              titulo: 'Meus Serviços', 
+              cor: Color.fromARGB(255, 146, 150, 172),
+            ),
+
+            CardNavbar(
+              onTap: (){}, 
+              icon: Icons.person, 
+              size: 35, 
+              titulo: 'Meu Perfil', 
+              cor: Color.fromARGB(255, 146, 150, 172),
+            )
+          ],
+        ),
+      )
     );
   }
 }

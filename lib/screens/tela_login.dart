@@ -15,7 +15,7 @@ class TelaLogin extends StatelessWidget {
           }, 
           icon: Icon(
             Icons.arrow_back, 
-            color: Color.fromARGB(255, 0, 77, 139),
+            color: Color.fromARGB(255, 36, 56, 155),
             size: 40,
           )
         ),
@@ -37,8 +37,8 @@ class TelaLogin extends StatelessWidget {
                 child: Logo(
                   tamanho: 50, 
                   mainAxisAlignment: MainAxisAlignment.center,
-                  corIcone: Color.fromARGB(255, 0, 77, 139),
-                  corTexto: Color.fromARGB(255, 0, 77, 139),
+                  corIcone: Color.fromARGB(255, 36, 56, 155),
+                  corTexto: Color.fromARGB(255, 36, 56, 155),
                 ),
               ),
 
@@ -226,7 +226,7 @@ class _FormLoginState extends State<FormLogin> {
             onPressed: _submit,
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.black,
-              backgroundColor: const Color.fromARGB(255, 0, 77, 139),
+              backgroundColor: const Color.fromARGB(255, 36, 56, 155),
               minimumSize: Size(425, 75),
             ),
             child: Stack(

@@ -20,7 +20,7 @@ class Botao extends StatelessWidget {
     
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.black,
-        backgroundColor: const Color.fromARGB(255, 0, 77, 139),
+        backgroundColor: const Color.fromARGB(255, 36, 56, 155),
         minimumSize: Size(width, height),
       ),
 
